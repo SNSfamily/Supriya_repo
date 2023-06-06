@@ -29,42 +29,42 @@ public class PlaylistTest {
         printPlaylist();
         Assert.assertEquals(playlist.size(), 0);
 
-        // Add S1
+        // Adding S1
         addSong("S1");
         // Playlist: [S1]
         printPlaylist();
         Assert.assertEquals(playlist.size(), 1);
         Assert.assertEquals(playlist.peekLast(), "S1");
 
-        // Add S2
+        // Adding S2
         addSong("S2");
         // Playlist: [S1, S2]
         printPlaylist();
         Assert.assertEquals(playlist.size(), 2);
         Assert.assertEquals(playlist.peekLast(), "S2");
 
-        // Add S3
+        // Adding S3
         addSong("S3");
         // Playlist: [S1, S2, S3]
         printPlaylist();
         Assert.assertEquals(playlist.size(), 3);
         Assert.assertEquals(playlist.peekLast(), "S3");
 
-        // Add S4
+        // Adding S4
         addSong("S4");
         // Playlist: [S2, S3, S4]
         printPlaylist();
         Assert.assertEquals(playlist.size(), 3);
         Assert.assertEquals(playlist.peekLast(), "S4");
 
-        // Play S2
+        // Playing S2
         addSong("S2");
         // Playlist: [S3, S4, S2]
         printPlaylist();
         Assert.assertEquals(playlist.size(), 3);
         Assert.assertEquals(playlist.peekLast(), "S2");
 
-        // Play S1
+        // Playing S1
         addSong("S1");
         // Playlist: [S4, S2, S1]
         printPlaylist();
